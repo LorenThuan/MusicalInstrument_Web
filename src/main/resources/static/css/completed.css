@@ -1,0 +1,227 @@
+/*
+
+    Author: Yonnon
+
+    Website: Madara Web DEMO
+
+*/
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+    01. General Setting
+    02. Responsive Snipper
+
+--------------------------------------------- */
+/* 
+------------------------------------------------
+01. General Setting
+------------------------------------------------
+*/
+/* Font-Google */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam', sans-serif;
+  scroll-behavior: smooth; }
+  *:focus {
+    outline: 0; }
+  * input::-webkit-outer-spin-button,
+  * input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
+/* 
+------------------------------------------------
+02. Responsive Snipper
+------------------------------------------------
+*/
+/* 
+      Devices : iphone 5/SE, iphone 6,7,8 (plus), iphone X, small Table, Ipad, Ipad Pro, TV 1920x1080
+      Vertical : d
+      Horizontal : n
+*/
+/* IPHONE 5, SE */
+/* IPHONE 6,7,8 */
+/* IPHONE 6,7,8 (plus) */
+/* 
+
+
+/* IPHONE X */
+/* 
+
+
+/* SMALL TABLE */
+/* 
+
+
+/* IPAD */
+/* 
+
+
+/* IPAD PRO */
+/* 
+
+
+/* DESKTOP */
+/* 
+
+
+/* Custom */
+body {
+  height: 100%; }
+
+img {
+  user-select: none; }
+
+::selection {
+  background-color: #eb3349;
+  color: #fff; }
+
+/* 
+------------------------------------------------
+03. Nav Bar
+------------------------------------------------
+*/
+.container-nav .main-nav__category {
+  display: flex;
+  flex-direction: row; }
+  .container-nav .main-nav__category p {
+    display: inline-block !important;
+    margin: 0;
+    color: #eb3349;
+    font-weight: 600; }
+  .container-nav .main-nav__category span {
+    margin: 0 5px; }
+  .container-nav .main-nav__category a {
+    color: #111; }
+
+/* 
+------------------------------------------------
+04. Main content
+------------------------------------------------
+*/
+
+.title-cart {
+  display: flex;
+  width: 100%;
+  padding: 0% 20%;
+  margin: 0px auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40px;
+}
+.title-cart button {
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.title-cart button a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+}
+.title-cart button:nth-child(1) {
+  background-color: #205375;
+}
+.title-cart button:nth-child(2) {
+  background-color: #112B3C;
+}
+
+
+.container-form-completed {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+  margin: 10em auto;
+  margin-top: 3em;
+  width: 60%;
+  height: 100%;
+  border-radius: 3px; }
+  @media screen and (max-width: 1023px) {
+    .container-form-completed {
+      width: 100% !important;
+      height: 110%; } }
+  .container-form-completed .form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .container-form-completed .form .alert-success {
+      margin: 2em 0; }
+    .container-form-completed .form .order-details {
+      border: 1px solid #cccccc;
+      padding: 0 2%; }
+      .container-form-completed .form .order-details__header h3 {
+        font-weight: 600; }
+      .container-form-completed .form .order-details__date {
+        font-size: 1.2em;
+        padding: 1em 0; }
+      .container-form-completed .form .order-details__paymentmethods {
+        font-size: 1.2em;
+        padding: 1em 0; }
+      .container-form-completed .form .order-details__table {
+        font-size: 1.2em; }
+        .container-form-completed .form .order-details__table h2 {
+          font-weight: 600; }
+        .container-form-completed .form .order-details__table table {
+          margin-top: 1.5em; }
+          .container-form-completed .form .order-details__table table tr th {
+            text-transform: uppercase; }
+      .container-form-completed .form .order-details__total {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1em 0 4em 0; }
+        .container-form-completed .form .order-details__total p {
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          font-size: 1.6em;
+          font-weight: 600; }
+        .container-form-completed .form .order-details__total span {
+          font-size: 1.3em;
+          color: #eb3349;
+          font-weight: 600;
+          margin: 0;
+          padding: 0; }
+  .container-form-completed .redirect-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3em; }
+    .container-form-completed .redirect-wrapper a {
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none; }
+    .container-form-completed .redirect-wrapper__first {
+      margin: 0 1%; }
+      .container-form-completed .redirect-wrapper__first a {
+        background-color: #10182f;
+        color: #fff; }
+        .container-form-completed .redirect-wrapper__first a:hover {
+          background-color: #303c5d;
+          transition: all ease .3s; }
+        .container-form-completed .redirect-wrapper__first a:active {
+          background-color: #1a1011;
+          transition: all ease 0s; }
+    .container-form-completed .redirect-wrapper__second a {
+      background-color: #eb3349;
+      color: #fff; }
+      .container-form-completed .redirect-wrapper__second a:hover {
+        background-color: #f35b43;
+        transition: all ease .3s; }
+      .container-form-completed .redirect-wrapper__second a:active {
+        background-color: #b62b3b;
+        transition: all ease 0s; }
+
+/*# sourceMappingURL=completed.css.map */

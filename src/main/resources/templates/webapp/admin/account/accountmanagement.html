@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Quản lí tài khoản</title>
+<link rel="stylesheet" th:href="@{/css/index.css}">
+<link rel="stylesheet" th:href="@{/css/accountmanagement.css}">
+<link rel="stylesheet"
+	th:href="@{/bootstrap-4.0.0-dist/css/bootstrap.min.css}">
+<link rel="stylesheet"
+	th:href="@{///cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css}">
+<link rel="stylesheet"
+	th:href="@{/framework/font-awesome-pro-master/css/all.min.css}">
+<link rel="shortcut icon" th:href="@{/img/favicon@16x.png}">
+
+</head>
+
+<script>
+	(function(h, o, t, j, a, r) {
+		h.hj = h.hj || function() {
+			(h.hj.q = h.hj.q || []).push(arguments)
+		};
+		h._hjSettings = {
+			hjid : 2352331,
+			hjsv : 6
+		};
+		a = o.getElementsByTagName('head')[0];
+		r = o.createElement('script');
+		r.async = 1;
+		r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+		a.appendChild(r);
+	})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+<body>
+
+	<!-- Back to Top Start-->
+	<div th:if="${param.success}">
+		<div class="alert alert-info"
+			style="background-color: chartreuse; text-align: center;">You've
+			reset password success to our awesome app!</div>
+	</div>
+
+	<div th:if="${param.successdelete}">
+		<div class="alert alert-info"
+			style="background-color: chartreuse; text-align: center;">You've
+			delete user success to our awesome app!</div>
+	</div>
+	<div onclick="clickToTop()" id="back-to-top">
+		<i class="fal fa-angle-up"></i>
+	</div>
+	<!-- Back to Top End-->
+	<div class="container-fluid">
+		<div class="container-f">
+			<div class="left">
+				<!-- phần logo hình con nhện đầu tiên -->
+				<div class="logo-banner">
+					<a href="/index.html"> <img id="logo-img"
+						th:src="@{/img/favicon@16x.png}" alt="">
+					</a>
+					<div class="left-title-content">
+						<a id="logo-title" href="#"> Madara Intrumental </a>
+					</div>
+				</div>
+				<!-- slide bar bọc các icon, mỗi 4 icon sẽ có 1 thang kẻ ngang nên dùng 1 slide bar để bọc  -->
+					<div class="slide-bar">
+
+					<div class="left-border">
+						<ul class="nav">
+							<li class="item" ><a href="/quanlysanpham/">
+									<i class="mdi mdi-weight mdi-24px"></i>
+									<div class="left-title-content">Quản lí sản phẩm</div>
+							</a></li>
+						</ul>
+					</div>
+
+
+					<div class="left-border">
+						<ul class="nav">
+							<li class="item" id="active"><a href="/accountmanagement/"> <i
+									class="mdi mdi-account-circle mdi-24px"></i>
+									<div class="left-title-content">Quản lí tài khoản</div>
+							</a></li>
+					</div>
+
+					<div class="left-border">
+						<ul class="nav">
+							<li class="item"><a href="/thongkedoanhthu/thongke/"> <i
+									class="mdi mdi-cash-usd mdi-24px"></i>
+									<div class="left-title-content">Thống kê doanh thu</div>
+							</a></li>
+
+							<li class="item"><a href="/thongkekhachhang/thongke/"> <i
+									class="mdi mdi-human mdi-24px"></i>
+									<div class="left-title-content">Thống kê khách hàng</div>
+							</a></li>
+						</ul>
+					</div>
+
+
+					<div class="left-border">
+						<ul class="nav">
+							<li class="item"><a href="/changepass-admin"> <i
+									class="mdi mdi-key-variant mdi-24px"></i>
+									<div class="left-title-content">Đổi mật khẩu</div>
+							</a></li>
+							<li class="item"><a th:href="@{/logout}"> <i
+									class="mdi mdi-power mdi-24px"></i>
+									<div class="left-title-content">Đăng xuất</div>
+							</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="container main-content list">
+				<div th:if="${success}"
+					class="row alert alert-success alert-dismissible">
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<span th:text="${success}"></span>
+				</div>
+
+
+				<div class="right" th:switch="${users}">
+					<h2 th:case="null">No users yet!</h2>
+					<div class="wrapper-main">
+						<!-- title -->
+						<div class="title-content" th:case="*">
+							<h2>QUẢN LÍ TÀI KHOẢN</h2>
+						</div>
+
+						<div class="function-content">
+							<div class="function-select">
+								<select name="" id="" class="form-control">
+									<option value="0">Sắp xếp theo chữ cái</option>
+									<option value="1">Sắp xếp tên tài khoản theo thứ tự
+										bảng chữ cái A-Z</option>
+									<option value="2">Sắp xếp tên tài khoản theo thứ tự
+										bảng chữ cái A-Z</option>
+								</select> <select name="" id="" class="form-control">
+									<option value="0">Sắp xếp theo ngày tạo</option>
+									<option value="1">Sắp xếp theo ngày tạo lâu nhất</option>
+									<option value="2">Sắp xếp theo ngày tạo gần đầy nhất</option>
+								</select>
+							</div>
+
+
+
+							<form style="margin-left: 1200px" class="function-search"
+								action="#" th:action="@{/accountmanagement/search}" method="GET">
+								<div class="form-group">
+									<input type="text" class="form-group" name="s"
+										placeholder="Type employee name..." />
+									<button type="submit" class="btn btn-primary">Search</button>
+								</div>
+
+							</form>
+						</div>
+
+						<div class="add-content">
+							<div class="box-add">
+								<a href="/accountmanagement/create"> <span>Thêm tài
+										khoản</span> <i class="fas fa-plus-hexagon"></i>
+								</a>
+							</div>
+						</div>
+
+						<div class="wrap-content">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th>ID</th>
+										<th>User Name</th>
+										<th>Họ Tên</th>
+										<th>Số điện thoại</th>
+										<th>Email</th>
+										<th>Ngày sinh</th>
+										<th>Giới tính</th>
+										<th>Ngày tạo</th>
+										<th>Reset PassWord</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="contact,iterStat : ${users}">
+										<td th:text="${iterStat.count}"></td>
+										<td th:text="${contact.tenTaiKhoan}"></td>
+										<td th:text="${contact.hoTen}"></td>
+										<td th:text="${contact.soDienThoai}"></td>
+										<td th:text="${contact.email}"></td>
+										<td th:text="${contact.ngaySinh}"></td>
+										<td th:text="${contact.gioiTinh}"></td>
+										<td th:text="${contact.ngayTao}"></td>
+										<td><a
+											th:href="@{/accountmanagement/{id}/ressetpass(id=${contact.id})}"
+											class="btn btn-success">Reset Password</a></td>
+										<td><a
+											th:href="@{/accountmanagement/{id}/delete(id=${contact.id})}"
+											class="remove">Delete</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
+
+<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script th:src="@{/js/adminpage.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script th:src="@{/bootstrap-4.0.0-dist/js/bootstrap.min.js}"></script>
+
+
+

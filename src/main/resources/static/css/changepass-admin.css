@@ -1,0 +1,274 @@
+/*
+
+    Author: Yonnon
+
+    Website: Madara Web DEMO
+
+*/
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+    01. General Setting
+    02. Responsive Snipper
+    03. Preloader
+    04. Header
+    05. Nav
+
+--------------------------------------------- */
+/* 
+------------------------------------------------
+01. General Setting
+------------------------------------------------
+*/
+/* Font-Google */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam', sans-serif;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: 0;
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+------------------------------------------------
+02. Responsive Snipper
+------------------------------------------------
+*/
+/* 
+      Devices : iphone 5/SE, iphone 6,7,8 (plus), iphone X, small Table, Ipad, Ipad Pro, TV 1920x1080
+      Vertical : d
+      Horizontal : n
+*/
+/* IPHONE 5, SE */
+/* IPHONE 6,7,8 */
+/* IPHONE 6,7,8 (plus) */
+/* 
+
+
+/* IPHONE X */
+/* 
+
+
+/* SMALL TABLE */
+/* 
+
+
+/* IPAD */
+/* 
+
+
+/* IPAD PRO */
+/* 
+
+
+/* DESKTOP */
+/* 
+
+
+/* Custom */
+body {
+  height: 200vh;
+}
+
+img {
+  user-select: none;
+}
+
+::selection {
+  background-color: #eb3349;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #545D7A !important;
+}
+
+body {
+  height: 100vh;
+}
+
+.container-fluid {
+  width: 100% !important;
+  position: absolute;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.container-fluid .container-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+}
+.container-fluid .container-f .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5%;
+  background-color: #eb3349;
+  height: 100vh;
+  z-index: 9999;
+  left: 0px;
+  top: 0px;
+  position: fixed !important;
+  transition: all .5s;
+  position: absolute;
+}
+.container-fluid .container-f .left img#logo-img {
+  width: 40px;
+  height: 40px;
+}
+.container-fluid .container-f .left:hover .left-title-content {
+  transition: all .5s ease;
+  display: block;
+}
+.container-fluid .container-f .left .left-title-content {
+  display: none;
+  transition: all .5s ease 0s;
+}
+.container-fluid .container-f .left .left-title-content a#logo-title {
+  color: #ece5e5 !important;
+  text-transform: uppercase;
+  font-weight: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-size: 95%;
+  text-decoration: none;
+  pointer-events: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.container-fluid .container-f .left .logo-banner {
+  top: 0px;
+  left: 0px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.container-fluid .container-f .left .slide-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-fluid .container-f .left .slide-bar img {
+  width: 25px;
+  height: 25px;
+}
+.container-fluid .container-f .left .slide-bar .left-border {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  width: 80% !important;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  width: 100% !important;
+  margin: 10px 0px;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li.item {
+  margin-top: 10px;
+  padding: 5px 0px;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li.item i {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0px 5px;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li.item a {
+  color: #f3e8e8;
+  font-size: 100%;
+  white-space: nowrap;
+  height: 100% !important;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li.item a:hover {
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li#active {
+  background-color: #fff;
+  padding: 5px 0px;
+  width: 100% !important;
+  margin-top: 20px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.container-fluid .container-f .left .slide-bar .left-border ul li#active a, .container-fluid .container-f .left .slide-bar .left-border ul li#active i {
+  color: #eb3349 !important;
+}
+.container-fluid .container-f .right {
+  width: 95%;
+  right: 0px !important;
+  top: 0px !important;
+  position: absolute;
+  height: auto;
+}
+.container-fluid .container-f .right .wrapper-main {
+  padding: 0 3%;
+  height: auto;
+}
+.container-fluid .container-f .right .wrapper-main .title-content h2 {
+  padding: 1em 0;
+  line-height: 35px;
+  font-weight: 600;
+}
+.container-fluid .container-f .right .wrapper-main .wrap-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0em 20em;
+}
+.container-fluid .container-f .right .wrapper-main .wrap-content .title-table {
+  padding: 1em 0;
+}
+.container-fluid .container-f .right .wrapper-main .wrap-content .form-group {
+  margin: 2% 0;
+}
+.container-fluid .container-f .right .wrapper-main .wrap-content .form-group label {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.container-fluid .container-f .right .wrapper-main .wrap-content .wrap-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0;
+}
+
+/*# sourceMappingURL=changepass-admin.css.map */

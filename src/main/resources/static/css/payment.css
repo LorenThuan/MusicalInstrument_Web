@@ -1,0 +1,421 @@
+/*
+
+    Author: Yonnon
+
+    Website: Madara Web DEMO
+
+*/
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+    01. General Setting
+    02. Responsive Snipper
+    03. Nav Bar
+    04. Main content
+
+--------------------------------------------- */
+/* 
+------------------------------------------------
+01. General Setting
+------------------------------------------------
+*/
+/* Font-Google */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam', sans-serif;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: 0;
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+------------------------------------------------
+02. Responsive Snipper
+------------------------------------------------
+*/
+/* 
+      Devices : iphone 5/SE, iphone 6,7,8 (plus), iphone X, small Table, Ipad, Ipad Pro, TV 1920x1080
+      Vertical : d
+      Horizontal : n
+*/
+/* IPHONE 5, SE */
+/* IPHONE 6,7,8 */
+/* IPHONE 6,7,8 (plus) */
+/* 
+
+
+/* IPHONE X */
+/* 
+
+
+/* SMALL TABLE */
+/* 
+
+
+/* IPAD */
+/* 
+
+
+/* IPAD PRO */
+/* 
+
+
+/* DESKTOP */
+/* 
+
+
+/* Custom */
+body {
+  height: 100%;
+}
+
+img {
+  user-select: none;
+}
+
+::selection {
+  background-color: #eb3349;
+  color: #fff;
+}
+
+/* 
+------------------------------------------------
+03. Nav Bar
+------------------------------------------------
+*/
+.container-nav .main-nav__category {
+  display: flex;
+  flex-direction: row;
+}
+.container-nav .main-nav__category p {
+  display: inline-block !important;
+  margin: 0;
+  color: #eb3349;
+  font-weight: 600;
+}
+.container-nav .main-nav__category span {
+  margin: 0 5px;
+}
+.container-nav .main-nav__category a {
+  color: #111;
+}
+
+/* 
+------------------------------------------------
+04. Main content
+------------------------------------------------
+*/
+
+.title-cart {
+  display: flex;
+  width: 100%;
+  padding: 0% 20%;
+  margin: 0px auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40px;
+}
+.title-cart button {
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.title-cart button a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+}
+.title-cart button:nth-child(1) {
+  background-color: #205375;
+}
+.title-cart button:nth-child(2) {
+  background-color: #112B3C;
+}
+
+.container-form-payment {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 30vh;
+  margin: 10em auto;
+  margin-top: 3em;
+  width: 75%;
+  padding: 0 2%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 15px 45px rgba(0, 29, 147, 0.15);
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment {
+    width: 100% !important;
+    height: 110%;
+  }
+}
+.container-form-payment .form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-form-payment .form .form-header {
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container-form-payment .form .form-header h2, .container-form-payment .form .form-header p {
+  line-height: 30px;
+}
+.container-form-payment .form .form-content__progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 2em 0;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__progress {
+    flex-direction: column;
+  }
+}
+.container-form-payment .form .form-content__progress span.span-control {
+  font-size: 150%;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__progress span.span-control {
+    display: none;
+  }
+}
+.container-form-payment .form .form-content__progress span.span-control-first {
+  color: #eb3349;
+}
+.container-form-payment .form .form-content__progress .progress-item {
+  margin: 0 5%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__progress .progress-item {
+    margin: 1em 0;
+  }
+}
+.container-form-payment .form .form-content__progress .progress-item i {
+  font-size: 150%;
+}
+.container-form-payment .form .form-content__progress .progress-item p {
+  margin: 10% 0;
+  font-weight: 600;
+  user-select: text;
+  cursor: text;
+}
+.container-form-payment .form .form-content__progress .progress-item span {
+  display: block;
+  text-align: center;
+  left: 0;
+  z-index: 9999;
+  font-weight: bold;
+  width: 100%;
+  width: 35px;
+  height: 35px;
+  background-color: #7b7b7b;
+  border: 1px solid #555555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-payment .form .form-content__progress .progress-item span a {
+  color: #fff;
+}
+.container-form-payment .form .form-content__progress .first-step i {
+  color: #eb3349;
+}
+.container-form-payment .form .form-content__progress .first-step p {
+  color: #eb3349;
+}
+.container-form-payment .form .form-content__progress .first-step span {
+  background-color: #eb3349;
+  border: 1px solid #b62b3b;
+}
+.container-form-payment .form .form-content__progress .second-step i {
+  color: #eb3349;
+}
+.container-form-payment .form .form-content__progress .second-step p {
+  color: #eb3349;
+}
+.container-form-payment .form .form-content__progress .second-step span {
+  background-color: #eb3349;
+  border: 1px solid #b62b3b;
+}
+.container-form-payment .form .form-content__payment {
+  margin: 2em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Main have 3 item */
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__payment {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container-form-payment .form .form-content__payment .payitem {
+  /* It's just a header in any item */
+}
+.container-form-payment .form .form-content__payment .payitem .payitem-head {
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #eb3349;
+  color: #fff;
+  padding: 2px 0px;
+}
+.container-form-payment .form .form-content__payment .payitem .payitem-head h4 {
+  padding: 0px 10px;
+}
+.container-form-payment .form .form-content__payment .payitem .payitem-content {
+  padding: 0 10px;
+  min-height: 546.062px;
+  height: auto;
+}
+.container-form-payment .form .form-content__payment .payitem .payitem-content .district {
+  display: none;
+}
+.container-form-payment .form .form-content__payment .payment-address {
+  width: 30%;
+  border: 1px solid #cccccc;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__payment .payment-address {
+    width: 95%;
+    margin: 0px auto;
+  }
+}
+.container-form-payment .form .form-content__payment .payment-address textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0 0 2% 0;
+}
+.container-form-payment .form .form-content__payment .payment-delivery {
+  width: 30%;
+  margin: 0 5%;
+  border: 1px solid #cccccc;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__payment .payment-delivery {
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 5%;
+  }
+}
+.container-form-payment .form .form-content__payment .payment-total {
+  width: 30%;
+  border: 1px solid #cccccc;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-payment .form .form-content__payment .payment-total {
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 5%;
+  }
+}
+.container-form-payment .form .form-content__payment .payment-total .box-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 20%;
+  width: 100%;
+  margin-top: 5%;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-item__image {
+  width: 20%;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-item__image img {
+  width: auto;
+  height: 70px;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-item__name {
+  width: 60%;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-item__price {
+  width: 20%;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__item h4 {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__item span#total-price {
+  font-weight: 600;
+  color: #eb3349;
+  font-size: 1.2em;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__submit {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__submit button#btn-order {
+  margin: 2em 0;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__submit button#btn-order a {
+  text-align: right;
+  color: #fff;
+  margin-top: 2em;
+  background-color: #a8cf45;
+  font-size: 110%;
+  outline: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__submit button#btn-order a:hover {
+  background-color: #f35b43;
+  transition: all ease .3s;
+}
+.container-form-payment .form .form-content__payment .payment-total .box-total__submit button#btn-order a:active {
+  background-color: #b62b3b;
+  transition: all ease 0s;
+}
+
+/*# sourceMappingURL=payment.css.map */

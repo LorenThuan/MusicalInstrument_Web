@@ -1,0 +1,267 @@
+/*
+
+    Author: Yonnon
+
+    Website: Madara Web DEMO
+
+*/
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+    01. General Setting
+    02. Responsive Snipper
+
+--------------------------------------------- */
+/* 
+------------------------------------------------
+01. General Setting
+------------------------------------------------
+*/
+/* Font-Google */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam', sans-serif;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: 0;
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+------------------------------------------------
+02. Responsive Snipper
+------------------------------------------------
+*/
+/* 
+      Devices : iphone 5/SE, iphone 6,7,8 (plus), iphone X, small Table, Ipad, Ipad Pro, TV 1920x1080
+      Vertical : d
+      Horizontal : n
+*/
+/* IPHONE 5, SE */
+/* IPHONE 6,7,8 */
+/* IPHONE 6,7,8 (plus) */
+/* 
+
+
+/* IPHONE X */
+/* 
+
+
+/* SMALL TABLE */
+/* 
+
+
+/* IPAD */
+/* 
+
+
+/* IPAD PRO */
+/* 
+
+
+/* DESKTOP */
+/* 
+
+
+/* Custom */
+body {
+  height: 100%;
+}
+
+img {
+  user-select: none;
+}
+
+::selection {
+  background-color: #eb3349;
+  color: #fff;
+}
+
+.container-form-login {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 70vh;
+  margin: 10em auto;
+  margin-top: 3em;
+}
+.container-form-login .form {
+  width: 50%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 15px 45px rgba(0, 29, 147, 0.15);
+}
+@media screen and (max-width: 1023px) {
+  .container-form-login .form {
+    width: 100% !important;
+    height: 110%;
+  }
+}
+.container-form-login .form .form-header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #dae1f5;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-login .form .form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container-form-login .form .form-header h2, .container-form-login .form .form-header p {
+  line-height: 30px;
+}
+.container-form-login .form .main-form {
+  margin-top: 5em;
+}
+.container-form-login .form .main-form input[type=text], .container-form-login .form .main-form input[type=password] {
+  position: relative;
+  width: 100% !important;
+  height: 38px;
+  caret-color: #306BF3;
+}
+.container-form-login .form .main-form input[type=text]::placeholder, .container-form-login .form .main-form input[type=password]::placeholder {
+  font-size: 110%;
+  color: #545D7A;
+  line-height: 40px;
+  color: #111;
+}
+.container-form-login .form .main-form input[type=text]:focus, .container-form-login .form .main-form input[type=password]:focus {
+  line-height: 40px;
+  color: #111;
+}
+.container-form-login .form .main-form i:not(#i-date):not(#i5) {
+  position: absolute;
+  right: 10px;
+  font-size: 15px;
+  display: none;
+  color: #dd3434;
+}
+.container-form-login .form .main-form i#i5 {
+  color: #dd3434;
+  display: inline-block;
+  position: absolute;
+  top: 42px;
+  right: 12px;
+  display: none;
+}
+.container-form-login .form .main-form p#date-display {
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+.container-form-login .form .main-form .class-form {
+  margin: 0px auto;
+  width: 70%;
+}
+@media screen and (max-width: 799px) {
+  .container-form-login .form .main-form .class-form {
+    width: 100% !important;
+  }
+}
+.container-form-login .form .main-form .class-form .col-md-6 {
+  margin: 0px !important;
+  padding: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-login .form .main-form .class-form .col-md-6 input {
+  width: 100% !important;
+}
+.container-form-login .form .main-form .class-form p#display-pass {
+  margin-top: 3%;
+}
+.container-form-login .form .main-form p.col-md-12 {
+  margin-top: -10px;
+  font-weight: bold;
+}
+.container-form-login .form .main-form .form-group {
+  margin: 2em 0 0 0;
+}
+.container-form-login .form .main-form .form-group label {
+  font-size: 1.2em;
+}
+.container-form-login .form .main-form .form-group input {
+  width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .container-form-login .form .main-form .form-group {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
+.container-form-login .form .class-btn {
+  margin: 0px 16% !important;
+  width: 69% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-login .form .class-btn span {
+  display: inline-block;
+  font-size: 100%;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 20px;
+  margin-top: 2%;
+}
+.container-form-login .form .class-btn a {
+  color: #306BF3;
+}
+.container-form-login .form .class-btn button {
+  margin-top: 2em;
+  background-color: #eb3349;
+  border: 1px solid #eb3349;
+  font-size: 110%;
+  outline: none;
+}
+.container-form-login .form .class-btn button:hover {
+  background-color: #f35b43;
+  transition: all ease .3s;
+  border: 1px solid #f35b43;
+}
+.container-form-login .form .class-btn button:active {
+  background-color: #b62b3b;
+  transition: all ease 0s;
+  border: 1px solid #b62b3b;
+}
+.container-form-login .form .box-forgotpasword {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+.container-form-login .form .box-forgotpasword span.btn-forgotpassword-inform {
+  right: 5%;
+  white-space: nowrap;
+}
+.container-form-login .form .box-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-login .form .box-signup span.btn-signup-inform {
+  margin: 20% 0 0 0;
+}
+
+.footer {
+  margin: 0;
+}
+
+/*# sourceMappingURL=login.css.map */
